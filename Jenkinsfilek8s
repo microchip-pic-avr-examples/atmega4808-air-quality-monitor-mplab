@@ -4,7 +4,7 @@ pipeline {
     agent {
         kubernetes {
             label 'atmega4808-air-quality-monitor-mplab'
-			defaultContainer 'xc8-mplabx'
+			defaultContainer 'avr8-mplabx'
             yamlFile 'cloudprovider.yml'
         }
     }
@@ -16,7 +16,7 @@ pipeline {
     }
 	
 	environment {
-		GITHUB_OWNER = 'microchip-pic-avr-examples'	
+		GITHUB_OWNER = 'microchip-pic-avr-examples'
 		GITHUB_URL ='https://github.com/microchip-pic-avr-examples/atmega4808-air-quality-monitor-mplab.git'
 		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/atmega4808-air-quality-monitor-mplab.git'
 		DEPLOY_TOOL_URL = 'https://bitbucket.microchip.com/scm/citd/tool-github-deploy.git'
@@ -47,28 +47,32 @@ pipeline {
             }
         }
 		
+		
 		stage('Pre-build') {
 			steps {
 				script {					
 					MPLABX_PATH= sh (script: 'update-alternatives --list MPLABX_PATH',returnStdout: true).trim()
-					COMPILER_PATH= sh (script: 'update-alternatives --list XC8_PATH',returnStdout: true).trim()										
+					COMPILER_PATH= sh (script: 'update-alternatives --list AVR8_PATH',returnStdout: true).trim()										
 					def pDir = "${MPLABX_PATH}/packs"					
 					def ver = COMPILER_PATH.split('/')[4].substring(1)		
 					
 					execute("git clone https://bitbucket.microchip.com/scm/citd/tool-mplabx-c-project-generator.git")					
-					execute("cd tool-mplabx-c-project-generator && node configGenerator.js sp=../ v8=${ver} packs=${pDir}")	
+					execute("cd tool-mplabx-c-project-generator && node configGenerator.js sp=../ avr8=${ver} packs=${pDir}")	
 				}
 			}
 		}
 
 		stage('Build') {
             steps {
-				script {
-					execute("git clone https://bitbucket.microchip.com/scm/citd/tool-mplabx-c-build.git")						
-					execute("cd tool-mplabx-c-build && node buildLauncher.js sp=../ rp=./output genMK=true")		 
+				script {						
+					withEnv(["PATH=$COMPILER_PATH:$PATH"]) 
+					{
+						execute("git clone https://bitbucket.microchip.com/scm/citd/tool-mplabx-c-build.git")								
+						execute("cd tool-mplabx-c-build && node buildLauncher.js sp=../ rp=./output genMK=true")		 
+					}
 				}
             }
-        }	
+        }
 		
         stage('GitHub-Deploy') {
 			when {
@@ -123,7 +127,6 @@ pipeline {
 			}
 		}
 	}
-	
 
     post {
         failure {			
