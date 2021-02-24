@@ -3,28 +3,28 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.mplabx.project.",
-        "version": " ",
-        "displayName": "  ",
-        "projectName": "",
-        "shortDescription": "",
+        "name": "com.microchip.mcu8.mplabx.project.atmega4808-air-quality-monitor-mplab",
+        "version": "1.0.2",
+        "displayName": "Indoor Air Quality Monitor",
+        "projectName": "atmega4808-air-quality-monitor-mplab",
+        "shortDescription": "This is the MPLAB X firmware associated with AN3403 Indoor Air Quality Monitor: Concept and Implementation.",
         "ide": {
-            "name": "",
-            "semverRange": ""
+            "name": "MPLAB X",
+            "semverRange": ">=5.35.0"
         },
         "compiler": [
 			{
-				"name": "",
-				"semverRange": ""
+				"name": "AVR GCC",
+				"semverRange": "^5.4.0"
 			}
 		],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "Atmega_DFP",
+            "semverRange": "^2.1.87"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=3.95.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -32,26 +32,62 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "",
+                "name": "ATMEGA4808",
                 "versionRange": "*"
             }
         },
-        "author": "",
+        "author": "Microchip",
         "subcategories": [
-            "",
+            "Internet of Things (IoT)",
+            "Sensor Nodes",
+            "MCC",
             [
-               "Peripherals", ""
+               "Peripherals", "ADC"
             ],
             [
-               "Peripherals", ""
-            ]            			
+               "Peripherals", "USART"
+            ],
+            [
+               "Peripherals", "NVMCTRL"
+            ],
+            [
+               "Peripherals", "EVSYS"
+            ],
+            [
+               "Peripherals", "CCL"
+            ],
+            [
+               "Peripherals", "RTC"
+            ],
+            [
+               "Peripherals", "PIT"
+            ],
+            [
+               "Peripherals", "SPI"
+            ],
+            [
+               "Peripherals", "SLPCTRL"
+            ],
+            [
+               "Peripherals", "TWI"
+            ]
         ],
         "peripherals": [
-            "",""
+            "ADC","USART","NVMCTRL","EVSYS","CCL","RTC","PIT","SPI","TWI","SLPCTRL"
         ],
         "keywords": [
-            "",
-            ""			
+          "IoT",
+          "WiFi",
+          "WINC1510",
+          "AVR IoT",
+          "Google Cloud",
+          "ATECC608A",
+          "Sensors",
+          "Humidity",
+          "PM",
+          "Temperature",
+          "CO2",
+          "TVOC"
         ],
 		"additionalData": {
 			"longDescription": {
