@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.atmega4808-air-quality-monitor-mplab",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "displayName": "Indoor Air Quality Monitor",
         "projectName": "atmega4808-air-quality-monitor-mplab",
         "shortDescription": "This is the MPLAB X firmware associated with AN3403 Indoor Air Quality Monitor: Concept and Implementation.",
