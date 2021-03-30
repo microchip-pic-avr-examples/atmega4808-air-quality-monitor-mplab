@@ -3,7 +3,7 @@ pipeline {
     agent {
         kubernetes {
 
-			defaultContainer 'xc8-mplabx'
+			defaultContainer 'avr8-mplabx'
             yamlFile '.citd/cloudprovider.yml'
         }
     }
