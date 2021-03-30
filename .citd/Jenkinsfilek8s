@@ -1,4 +1,5 @@
 // Jenkinsfile v2.0.0
+
 pipeline {
     agent {
         kubernetes {
@@ -15,8 +16,8 @@ pipeline {
 	
 	environment {
 		GITHUB_OWNER = 'microchip-pic-avr-examples'	
-		GITHUB_URL ='https://github.com/microchip-pic-avr-examples/atmega4808-air-quality-monitor-mplab'
-		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/atmega4808-air-quality-monitor-mplab.git'
+		GITHUB_URL ='https://github.com/microchip-pic-avr-examples/[ADD_REPO_NAME_HERE]'
+		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/[ADD_REPO_NAME_HERE].git'
 		SEMVER_REGEX = '^(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+$'
 		ARTIFACTORY_SERVER = 'https://artifacts.microchip.com:7999/artifactory'
 	}	
@@ -30,7 +31,7 @@ pipeline {
 		    steps {
 				script {
 					execute("git clone https://bitbucket.microchip.com/scm/citd/mpae-buildpipeline-groovy-scripts.git")
-					def buildPipeline = load ('mpae-buildpipeline-groovy-scripts/xc8mplabx-buildpipeline.groovy')
+					def buildPipeline = load ('mpae-buildpipeline-groovy-scripts/avr8mplabx-buildpipeline.groovy')
 					buildPipeline.runStages()
 				}
             }
