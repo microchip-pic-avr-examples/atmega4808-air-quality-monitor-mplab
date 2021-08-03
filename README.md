@@ -36,66 +36,43 @@ For more details refer to application note [AN3403 Indoor Air Quality Monitor: C
 
 ## Hardware Used
 
-+ [AVR-IoT WG Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/AC164160)
-	+ [ATmega4808](https://www.microchip.com/wwwproducts/en/ATMEGA4808)
-	+ [ATWINC1510](https://www.microchip.com/wwwproducts/en/ATwinc1500)
-	+ [ATECC608A (pre-provisioned)](https://www.microchip.com/wwwproducts/en/ATECC608A)
-	+ TEMT6000 light sensor
-	+ [MCP9808 temperature sensor](https://www.microchip.com/wwwproducts/en/en556182)
-	+ [MCP73871 Battery Charger](https://www.microchip.com/wwwproducts/en/en536670)
-	+ 2x push buttons
-	+ 4x LEDs
+* [AVR-IoT WG Development Board](https://www.microchip.com/DevelopmentTools/ProductDetails/AC164160)
+	* [ATmega4808](https://www.microchip.com/wwwproducts/en/ATMEGA4808)
+	* [ATWINC1510](https://www.microchip.com/wwwproducts/en/ATwinc1500)
+	* [ATECC608A (pre-provisioned)](https://www.microchip.com/wwwproducts/en/ATECC608A)
+	* TEMT6000 light sensor
+	* [MCP9808 temperature sensor](https://www.microchip.com/wwwproducts/en/en556182)
+	* [MCP73871 Battery Charger](https://www.microchip.com/wwwproducts/en/en536670)
+	* 2x push buttons
+	* 4x LEDs
 
-+ [Air Quality 3 Click](https://www.mikroe.com/air-quality-3-click)
-	+ CCS811 TVOC and eCO2 Sensor
+* [Air Quality 3 Click](https://www.mikroe.com/air-quality-3-click)
+	* CCS811 TVOC and eCO2 Sensor
 
-+ [OLED B Click](https://www.mikroe.com/oled-b-click)
+* [OLED B Click](https://www.mikroe.com/oled-b-click)
 
-+ [EEPROM3 Click](https://www.mikroe.com/eeprom-3-click)
-	+ [AT24CM02 2 Mbit EEPROM chip](https://www.microchip.com/wwwproducts/en/AT24CM02)
+* [EEPROM3 Click](https://www.mikroe.com/eeprom-3-click)
+	* [AT24CM02 2 Mbit EEPROM chip](https://www.microchip.com/wwwproducts/en/AT24CM02)
 
-+ [SPS30 PM Sensor](https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/)
+* [SPS30 PM Sensor](https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/)
 
-+ [SHT31-ARP Humidity and Temperature Sensor](https://www.digikey.in/product-detail/en/sensirion-ag/SHT31-ARP-B/1649-1012-1-ND/5872293)
+* [SHT31-ARP Humidity and Temperature Sensor](https://www.digikey.in/product-detail/en/sensirion-ag/SHT31-ARP-B/1649-1012-1-ND/5872293)
 
-+ [Proto Click](https://www.mikroe.com/proto-click)
+* [Proto Click](https://www.mikroe.com/proto-click)
 
-+ [Shuttle Click](https://www.mikroe.com/shuttle-click)
+* [Shuttle Click](https://www.mikroe.com/shuttle-click)
 
-+ [mikroBUS Shuttles](https://www.mikroe.com/mikrobus-shuttle)
+* [mikroBUS Shuttles](https://www.mikroe.com/mikrobus-shuttle)
 
 ## Software Tools
 
-* [MPLAB® X IDE v5.35](https://www.microchip.com/mplab/mplab-x-ide)
-* [AVR GCC Compiler v5.4.0](https://www.microchip.com/en-us/development-tools-tools-and-software/gcc-compilers-avr-and-arm)
-* [MPLAB® Code Configurator (MCC) v3.95.0](https://www.microchip.com/mplab/mplab-code-configurator)
-* [8-bit AVR MCUs Library v2.1.0](https://www.microchip.com/mplab/mplab-code-configurator)
-* [AVR-IoT WG Sensor Node v1.2.0](https://www.microchip.com/mplab/mplab-code-configurator)
-* [MikroElektronika Click Library v1.1.1](https://www.microchip.com/mplab/mplab-code-configurator)
-* [ATmega_DFP v2.1.87](https://packs.download.microchip.com/)
-
-
-## Peripherals Used
-
-+ Analog-to-Digital Converter (ADC)
-
-+ Universal Synchronous and Asynchronous Receiver and Transmitter (USART)
-
-+ Serial Peripheral Interface (SPI)
-
-+ Two-Wire Interface (TWI): I2C compatible
-
-+ Real-Time Counter (RTC)
-
-+ Periodic Interrupt Timer (PIT)
-
-+ Sleep Controller (SLPCTRL)
-
-+ Non Volatile Memory Access Control (NVMCTRL)
-
-+ Event System (EVSYS)
-
-+ Configurable Custom Logic (CCL)
+* MPLAB® X IDE [v5.35 or newer](https://www.microchip.com/mplab/mplab-x-ide)
+* AVR GCC Compiler [v5.4.0 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/gcc-compilers-avr-and-arm)
+* MPLAB® Code Configurator (MCC) [v3.95.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* 8-bit AVR MCUs Library [v2.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* AVR-IoT WG Sensor Node [v1.2.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* MikroElektronika Click Library [v1.1.1 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* ATmega_DFP [v2.1.87 or newer](https://packs.download.microchip.com/)
 
 ## Running the Demo
 
